@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="eleme:war">
+    <output-path>$PROJECT_DIR$/out/artifacts/eleme_war</output-path>
+    <root id="archive" name="eleme_war.war">
+      <element id="artifact" artifact-name="eleme:war exploded" />
+      <element id="dir-copy" path="$PROJECT_DIR$/../HellowWorld/web" />
+    </root>
+  </artifact>
+</component>
