@@ -76,16 +76,17 @@
 
 <span id="span">
     <%
-//        Integer a = (Integer)request.getAttribute("remain");
-//        if (a == -1){
-//            response.sendRedirect("/eleme/NoMore.jsp");
-//        }
         if (request.getAttribute("remain")==null){
-            out.print("是null");
+            out.print("好像是redirect出错了，应该…………不能用了吧");
         }
-        if("-1".equals(request.getAttribute("remain"))){
+        Integer a = (Integer)request.getAttribute("remain");
+        if (a == -1){
             response.sendRedirect("/eleme/NoMore.jsp");
         }
+
+//        if("-1".equals(request.getAttribute("remain"))){
+//            response.sendRedirect("/eleme/NoMore.jsp");
+//        }
     %>
     <%--循环，循环的是从request中获取的getLink，就是那个List，然后我们只显示一个，脑残的begin0end0了，实现就好--%>
     <form action="ReturnLink" method="post">

@@ -13,8 +13,10 @@ import java.util.List;
 
 /**
  * @author xiaozhankai
- * date 2018/11/28
- * 逻辑修改，防止刷新
+ * DATE 2018/11/28
+ * 逻辑修改，防止F5刷新
+ * 点击按钮跳转到ReturnLink,进行数据的更新，然后redirect到RefreshPreVent
+ * 进行查询，forward到GetHongBao.jsp，这样就避免了F5提交表格刷新
  */
 
 public class RefreshPrevent extends HttpServlet {

@@ -34,6 +34,10 @@ public class ReturnLink extends HttpServlet {
         // 转发到GetHongBao.jsp，让它去处理
 //        request.getRequestDispatcher("/GetHongBao.jsp").forward(request,response);
         // 2018/11/28解决刷新提交表格的问题
+        // 调用刷新，更新数据库
+        UserDao userDao = new UserDaolmpl();
+        userDao.usedToOne();
+        // 传到RefreshPrevent进行查询，不共享数据
         response.sendRedirect("/RefreshPrevent");
 //        这个方法同样实现了获取数据的时候进行更新，但是我们在UserDaolmpl中已经实现了
 //        UserDao ud = new UserDaolmpl();

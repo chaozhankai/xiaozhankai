@@ -32,9 +32,10 @@ public class UserDaolmpl implements UserDao{
                 list.add(eleme);
             }
             DBconn.closeConn();
+            // 取消调用更新方法，用来解决F5刷新的问题
             // 调用更新方法，这里解决了之前获取链接的同时不能更新的问题，不需要手动更新了
-            UserDao userDao = new UserDaolmpl();
-            userDao.usedToOne();
+//            UserDao userDao = new UserDaolmpl();
+//            userDao.usedToOne();
             return list;
 
         }
