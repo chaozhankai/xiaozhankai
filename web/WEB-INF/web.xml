@@ -23,6 +23,10 @@
         <servlet-name>ReturnLink</servlet-name>
         <servlet-class>com.servlet.ReturnLink</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RefreshPrevent</servlet-name>
+        <servlet-class>com.servlet.RefreshPrevent</servlet-class>
+    </servlet>
     <!--<servlet>-->
         <!--<servlet-name>UpdateLink</servlet-name>-->
         <!--<servlet-class>com.servlet.UpdateLink</servlet-class>-->
@@ -36,6 +40,10 @@
     <servlet-mapping><!--servlet类映射配置-->
         <servlet-name>ReturnLink</servlet-name>
         <url-pattern>/ReturnLink</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RefreshPrevent</servlet-name>
+        <url-pattern>/RefreshPrevent</url-pattern>
     </servlet-mapping>
     <!--<servlet-mapping>-->
         <!--<servlet-name>UpdateLink</servlet-name>-->

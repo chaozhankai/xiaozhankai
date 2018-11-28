@@ -76,8 +76,14 @@
 
 <span id="span">
     <%
-        Integer a = (Integer)request.getAttribute("remain");
-        if (a == -1){
+//        Integer a = (Integer)request.getAttribute("remain");
+//        if (a == -1){
+//            response.sendRedirect("/eleme/NoMore.jsp");
+//        }
+        if (request.getAttribute("remain")==null){
+            out.print("是null");
+        }
+        if("-1".equals(request.getAttribute("remain"))){
             response.sendRedirect("/eleme/NoMore.jsp");
         }
     %>

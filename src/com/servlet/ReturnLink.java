@@ -22,17 +22,19 @@ public class ReturnLink extends HttpServlet {
         doPost(request,response);
     }
     public void doPost(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException {
-        UserDao userDao = new UserDaolmpl();
-        // 获取数据库信息，存到里面
-        List<Eleme> getLink = userDao.getLink();
-        // 向request域中以键值对的形式存放信息，名字为getLink内容为getLink
-        request.setAttribute("getLink",getLink);
-        // 2018/10/16增加库存信息的显示,把余量也发送到request域里面
-        int remain = getLink.size()-1;
-        System.out.println(remain);
-        request.setAttribute("remain",remain);
+//        UserDao userDao = new UserDaolmpl();
+//        // 获取数据库信息，存到里面
+//        List<Eleme> getLink = userDao.getLink();
+//        // 向request域中以键值对的形式存放信息，名字为getLink内容为getLink
+//        request.setAttribute("getLink",getLink);
+//        // 2018/10/16增加库存信息的显示,把余量也发送到request域里面
+//        int remain = getLink.size()-1;
+//        System.out.println(remain);
+//        request.setAttribute("remain",remain);
         // 转发到GetHongBao.jsp，让它去处理
-        request.getRequestDispatcher("/GetHongBao.jsp").forward(request,response);
+//        request.getRequestDispatcher("/GetHongBao.jsp").forward(request,response);
+        // 2018/11/28解决刷新提交表格的问题
+        response.sendRedirect("/RefreshPrevent");
 //        这个方法同样实现了获取数据的时候进行更新，但是我们在UserDaolmpl中已经实现了
 //        UserDao ud = new UserDaolmpl();
 //        if (ud.usedToOne()){
