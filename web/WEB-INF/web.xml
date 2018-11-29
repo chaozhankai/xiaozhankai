@@ -20,7 +20,9 @@
     </welcome-file-list>
 
     <servlet><!--servlet类路径配置-->
+        <!-- servlet的内部名称，自定义。尽量有意义 -->
         <servlet-name>ReturnLink</servlet-name>
+        <!-- servlet的类全名：包名+类名 -->
         <servlet-class>com.servlet.ReturnLink</servlet-class>
     </servlet>
     <servlet>
@@ -38,12 +40,15 @@
 
 
     <servlet-mapping><!--servlet类映射配置-->
+        <!-- servlet的内部名称，一定要和上面的内部名称一致 -->
         <servlet-name>ReturnLink</servlet-name>
+        <!-- servlet的映射路径（访问servlet的路径） -->
         <url-pattern>/ReturnLink</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>RefreshPrevent</servlet-name>
         <url-pattern>/RefreshPrevent</url-pattern>
+        <url-pattern>/</url-pattern>
     </servlet-mapping>
     <!--<servlet-mapping>-->
         <!--<servlet-name>UpdateLink</servlet-name>-->

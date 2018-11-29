@@ -62,7 +62,7 @@
 <a href="ReturnLink" >
     <input id="b" type="submit" value="获取新红包" style="color: white">
 </a>
-    <input id="c" type="text" value="逻辑小更新" style="color: gray" disabled="disabled">
+    <input id="c" type="text" value="近期程序持续更新不能用见谅" style="color: gray" disabled="disabled">
 <%--<intput id="c" type="text" value="余量：${remain}" style="color: gray" onclick="yuliang()">--%>
     <%--这也是能实现的一种方法，但是没必要再特意搞一个了，样式还不好看--%>
     <%--<a href="usedToOneServlet">更新</a>--%>

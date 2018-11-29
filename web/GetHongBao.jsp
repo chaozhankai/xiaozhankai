@@ -61,14 +61,14 @@
         function msg(){
             alert("已刷新！")
         }
-        //防止F5无限刷新表单
-        document.addEventListener("keydown", function (e) {
-            if(e.keyCode==116) {
-                e.preventDefault();
-                //要做的其他事情
-                alert("别再按F5了啊我心慌，答应我好嘛！")
-            }
-        }, false);
+        //防止F5无限刷新表单，现不需要了
+        // document.addEventListener("keydown", function (e) {
+        //     if(e.keyCode==116) {
+        //         e.preventDefault();
+        //         //要做的其他事情
+        //         alert("别再按F5了啊我心慌，答应我好嘛！")
+        //     }
+        // }, false);
     </script>
 </head>
 
@@ -77,7 +77,7 @@
 <span id="span">
     <%
         if (request.getAttribute("remain")==null){
-            out.print("好像是redirect出错了，应该…………不能用了吧");
+            out.print("崩啦！崩啦！崩啦！");
         }
         Integer a = (Integer)request.getAttribute("remain");
         if (a == -1){
