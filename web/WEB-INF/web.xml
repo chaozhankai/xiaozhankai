@@ -16,7 +16,7 @@
     </filter-mapping>
 
     <welcome-file-list><!--默认首页地址-->
-        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>/</welcome-file>
     </welcome-file-list>
 
     <servlet><!--servlet类路径配置-->
@@ -28,6 +28,10 @@
     <servlet>
         <servlet-name>RefreshPrevent</servlet-name>
         <servlet-class>com.servlet.RefreshPrevent</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Start</servlet-name>
+        <servlet-class>com.servlet.Start</servlet-class>
     </servlet>
     <!--<servlet>-->
         <!--<servlet-name>UpdateLink</servlet-name>-->
@@ -48,6 +52,10 @@
     <servlet-mapping>
         <servlet-name>RefreshPrevent</servlet-name>
         <url-pattern>/RefreshPrevent</url-pattern>
+        <!--<url-pattern>/</url-pattern>-->
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Start</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
     <!--<servlet-mapping>-->

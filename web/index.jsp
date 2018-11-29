@@ -40,20 +40,13 @@
             background-color: dodgerblue;
         }
         #c{
-            width: 250px;
+            width: 60px;
             height: 20px;
             border: 0;
-            /*transform: translate(260px,50px);*/
-            transform: translate(200px,50px);
+            transform: translate(260px,50px);
             background-color: transparent;
         }
     </style>
-    <script type="text/javascript">
-        <%--弹出窗口，避免一次点多个浪费红包--%>
-        function yuliang(){
-            alert("aaa${remain}")
-        }
-    </script>
 </head>
 <body>
 
@@ -62,9 +55,9 @@
 <a href="ReturnLink" >
     <input id="b" type="submit" value="获取新红包" style="color: white">
 </a>
-    <input id="c" type="text" value="近期程序持续更新不能用见谅" style="color: gray" disabled="disabled">
-<%--<intput id="c" type="text" value="余量：${remain}" style="color: gray" onclick="yuliang()">--%>
-    <%--这也是能实现的一种方法，但是没必要再特意搞一个了，样式还不好看--%>
-    <%--<a href="usedToOneServlet">更新</a>--%>
+<%--<input id="c" type="text" value="近期程序持续更新不能用见谅" style="color: gray" disabled="disabled">--%>
+<input id="c" type="text" value="余量：${remain}" style="color: gray" disabled="disabled">
+<%--这也是能实现的一种方法，但是没必要再特意搞一个了，样式还不好看--%>
+<%--<a href="usedToOneServlet">更新</a>--%>
 </body>
 </html>
