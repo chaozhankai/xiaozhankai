@@ -31,7 +31,7 @@ public class Start extends HttpServlet {
         // 向request域中以键值对的形式存放信息，名字为getLink内容为getLink
         req.setAttribute("getLink",getLink);
         // 2018/10/16增加库存信息的显示,把余量也发送到request域里面
-        int remain = getLink.size()-1;
+        int remain = getLink.size();
         System.out.println(remain);
         req.setAttribute("remain",remain);
         req.getRequestDispatcher("/index.jsp").forward(req,resp);

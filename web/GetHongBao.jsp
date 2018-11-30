@@ -80,8 +80,11 @@
             out.print("崩啦！崩啦！崩啦！");
         }
         Integer a = (Integer)request.getAttribute("remain");
-        if (a == -1){
-            response.sendRedirect("/eleme/NoMore.jsp");
+        if (a == 0){
+            // 解决没有值的问题
+            request.getRequestDispatcher("NoMore.jsp").forward(request,response);
+//            req.getRequestDispatcher("/GetHongBao.jsp").forward(req,resp);
+//            response.sendRedirect("/eleme/NoMore.jsp");
         }
 
 //        if("-1".equals(request.getAttribute("remain"))){

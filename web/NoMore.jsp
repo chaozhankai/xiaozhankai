@@ -61,12 +61,13 @@
     <%--循环，循环的是从request中获取的getLink，就是那个List，然后我们只显示一个，脑残的begin0end0了，实现就好--%>
     <form action="ReturnLink" method="post">
         <%--获取link也就是红包，float left是为了防止两个input之间有空隙--%>
-        <a href="index.jsp">
+        <%--原来是跳转到index.jsp，但是不能刷新余量啊，这样走servlet肯定能实现--%>
+        <a href="https://www.xiaozhankai.com/">
         <input id="a" type="text" value="没有红包了请联系管理员更新，点击跳回主页" style="color: red" name="link" style="float: left;" disabled="disabled">
             </a>
         <%--submit就直接更新form了，先弹出一个弹窗再更新链接--%>
         <input id="b" type="submit" value="重试" style="color: white" onclick="msg()">
-        <input id="c" type="text" value="余量：0" style="color: gray" disabled="disabled">
+        <input id="c" type="text" value="余量：${remain}" style="color: gray" disabled="disabled">
     </form>
 
 
